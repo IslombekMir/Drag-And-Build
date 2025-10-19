@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div class="element-selection">
+                <h3>Elements</h3>
+                <button onclick="addElement('h1')">Heading</button>
+                <button onclick="addElement('p')">Paragraph</button>
+            </div>
+
+            <div class="added-element-ids">
+                <strong>Added Elements</strong>
+                <button onclick="removeElement()">Remove</button>
+                <p id="currentWorkspace-container"><strong>Current:</strong> <span id="currentWorkspace">Page</span></p>
+                <ul id="idList"></ul>
+            </div>
+
+            <div id="choose-layout">
+                <h2>Layout</h2>
+                <div class="layout-buttons">
+                    <button onclick="addLayout('row')">Add Row</button>
+                    <button onclick="addLayout('column')">Add Column</button>
+                    <button onclick="addLayout('center')">Add Centered</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="canvas">
+            <h2>Drop Elements Here</h2>
+        </div>
+    </div>
+
+    <div id="lower-panel">
+        <button id="exportBtn">Generate</button>
+    </div>
+</body>
+</html>
